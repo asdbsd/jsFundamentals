@@ -15,7 +15,7 @@ function pyramidOfKingDjoser(base, incrementValue) {
     let marbel = 0;
     let totalSteps = 0;
 
-    for (let start = pyramidWidth; start >= 1;) {
+    for (let start = pyramidWidth; start >= 1; start -= 2) {
         steps++;
         let pyramidBase = start - 2;
         if (start === 1 || start === 2) {
@@ -38,16 +38,9 @@ function pyramidOfKingDjoser(base, incrementValue) {
             lapis = 0;
         }
 
-
-
         totalStones += stones;
         totalMarbel += marbel;
-        totalLapis  += lapis;
-        
-
-        
-        start -= 2;
-        
+        totalLapis  += lapis;        
     }
 
     totalSteps += steps;
