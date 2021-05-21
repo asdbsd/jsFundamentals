@@ -1,11 +1,11 @@
 function nextDay(year, month, day) {
-    let startDate = new Date(year, month - 1, day);
-    let finalDate = new Date(year, month - 1, day);
-    finalDate.setDate(startDate.getDate() + 1);
-
-    let dateInString = finalDate.toLocaleDateString("en-US").split("/");
-
-    console.log(`${dateInString[2]}-${dateInString[0]}-${dateInString[1]}`);
+    let thisDay = new Date(year, month -= 1, day += 1);
+ 
+    let newYear = thisDay.getFullYear();
+    let newMonth = thisDay.getMonth();
+    let newDate = thisDay.getDate();
+ 
+    console.log(`${newYear}-${newMonth + 1}-${newDate}`);
 }
 
 nextDay(2016, 9, 30);

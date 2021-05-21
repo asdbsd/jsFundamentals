@@ -45,10 +45,10 @@ function pyramidOfKingDjoser(base, incrementValue) {
 
     totalSteps += steps;
 
-    console.log(`Stone required: ${Math.round(totalStones)}`);
-    console.log(`Marble required: ${Math.round(totalMarbel)}`);
-    console.log(`Lapis Lazuli required: ${Math.round(totalLapis)}`);
-    console.log(`Gold required: ${Math.round(totalGold)}`);
+    console.log(`Stone required: ${Math.ceil(totalStones)}`);
+    console.log(`Marble required: ${Math.ceil(totalMarbel)}`);
+    console.log(`Lapis Lazuli required: ${Math.ceil(totalLapis)}`);
+    console.log(`Gold required: ${Math.ceil(totalGold)}`);
     console.log(`Final pyramid height: ${Math.floor(totalSteps * pyramidIncrementation)}`);
 
 }
