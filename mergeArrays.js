@@ -1,13 +1,20 @@
 function mergeArrays(arr1, arr2) {
-    let result = [];
-    let workingArray = arr1.length >= arr2.length ? arr1 : arr2;
+    mergedArray = [];
 
-    for(let i = 0; i < workingArray.length; i++) {
-
-        
+    for (i = 0; i < arr2.length; i++) {
+        arr1.push(arr2[i]);
     }
 
-    console.log(result.join(' - '));
+    for (let i = 0; i < arr1.length / 2 ; i++) {
+        let secondPartIndex = (arr1.length / 2) + i
+        if (i % 2 === 0) {
+            mergedArray.push(Number(arr1[i]) + Number(arr1[secondPartIndex]));
+        } else {
+            mergedArray.push(arr1[i] + arr1[secondPartIndex]);
+        }
+    }
+
+    console.log(mergedArray.join(' - '));
 }
 
 mergeArrays(
