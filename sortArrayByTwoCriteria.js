@@ -1,18 +1,8 @@
 function sortArrayByTwoCriteria(strings) {
-    function compare(a, b) {
-        if (a.length - b.length < 0) {
-            return a.length - b.length;
-        } else if (a.length - b.length > 0) {
-            return a.length - b.length;
-        } else {
-            return a.localeCompare(b);
-        }
-    }
 
-
-
-    console.log(strings.sort(compare).join('\n'));
+    console.log(strings.sort((a,b) => a.length - b.length || a.localeCompare(b)).join('\n'));
 }
 
 sortArrayByTwoCriteria(["alpha", "beta", "gamma"])
+console.log('------------')
 sortArrayByTwoCriteria(["Isacc", "Theodor", "Jack", "Harrison", "George"]);
